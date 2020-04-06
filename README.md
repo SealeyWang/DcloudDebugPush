@@ -1,6 +1,9 @@
 # DcloudDebugPush
-DCloud 个推 unipush 推送调试基座
+DCloud 个推 unipush 推送调试基座  此项目本质上是一个Android本地打包基座 ，配置个推sdk方便调试而已
 
+  android 本地打包参考
+  https://www.jianshu.com/p/1181b5c1b6f1
+  https://ask.dcloud.net.cn/article/508
 
 你需要使用正式签名运行APP，来保证个推正常运行
 
@@ -77,7 +80,8 @@ DCloud 个推 unipush 推送调试基座
    release   Active Build Variant 
    
    
-   
+  
+
       
     
 
