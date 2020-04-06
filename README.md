@@ -73,8 +73,8 @@ DCloud 个推 unipush 推送调试基座
    使用release构建 
    Build Variants (在Android studio 做下脚  favorites 上面 )
    
-   Module  Active Build Variant
-   app     release 
+   Module    app     
+   release   Active Build Variant 
    
    
    
