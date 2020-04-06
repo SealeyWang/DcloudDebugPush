@@ -3,19 +3,22 @@ DCloud 个推 unipush 推送调试基座
 
 
 你需要使用正式签名运行APP，来保证个推正常运行
-android {
-      signingConfigs {
-//        第三方sdk调试需要 正式签名 运行
-        release {
-            storeFile file('D:\\2.hydcode\\zcar-app\\unpackage\\build\\zcar-app.jks')
-            storePassword '证书密码'
-            keyAlias = '证书别名'
-            keyPassword '密钥密码'
-        }
-    }
-    
-    ......
-}
+
+
+
+            android {
+                  signingConfigs {
+            //        第三方sdk调试需要 正式签名 运行
+                    release {
+                        storeFile file('D:\\2.hydcode\\zcar-app\\unpackage\\build\\zcar-app.jks')
+                        storePassword '证书密码'
+                        keyAlias = '证书别名'
+                        keyPassword '密钥密码'
+                    }
+                }
+
+                ......
+            }
 
 设置你自己的 applicationId "xxxxxxxxxxxxxx"  （in  app->build.gradle）
 
