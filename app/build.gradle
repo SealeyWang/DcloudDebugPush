@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+//        第三方sdk调试需要 正式签名 运行
+        release {
+            storeFile file('D:\\2.hydcode\\zcar-app\\unpackage\\build\\zcar-app.jks')
+            storePassword '证书密码'
+            keyAlias = '证书别名'
+            keyPassword '密钥密码'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "xxxxxxxxxxxxxx"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 11
+        versionName "1.2.4"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+//    compile(name: 'lib.5plus.base-release', ext: 'aar')
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
