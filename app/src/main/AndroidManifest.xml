@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="xxxxxxxxxxx"
+    package="your package name"
     >
 
 
@@ -14,8 +14,10 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="getui.permission.GetuiService.com.hyd.zcar"/>
-    <permission android:name="getui.permission.GetuiService.com.hyd.zcar" android:protectionLevel="normal"/>
+
+
+    <uses-permission android:name="getui.permission.GetuiService.your package name"/>
+    <permission android:name="getui.permission.GetuiService.your package name" android:protectionLevel="normal"/>
 
     <application
         android:allowBackup="true"
@@ -55,7 +57,6 @@
 
         <!--        dcloud push 个推 start-->
         <!-- 个推配置        -->
-
         <!-- uniPush 配置      -->
         <meta-data android:name="PUSH_APPID" android:value="your appid"/>
         <meta-data android:name="PUSH_APPSECRET" android:value="your appsecret"/>
@@ -100,10 +101,10 @@
         <receiver android:name="io.dcloud.feature.apsGt.GTNotificationReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="com.hyd.zcar.__CREATE_NOTIFICATION"/>
-                <action android:name="com.hyd.zcar.__REMOVE_NOTIFICATION"/>
-                <action android:name="com.hyd.zcar.__CLEAR_NOTIFICATION"/>
-                <action android:name="com.hyd.zcar.__CLILK_NOTIFICATION"/>
+                <action android:name="your package name.__CREATE_NOTIFICATION"/>
+                <action android:name="your package name.__REMOVE_NOTIFICATION"/>
+                <action android:name="your package name.__CLEAR_NOTIFICATION"/>
+                <action android:name="your package name.__CLILK_NOTIFICATION"/>
             </intent-filter>
         </receiver>
         <service
